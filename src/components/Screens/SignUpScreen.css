@@ -1,0 +1,65 @@
+.signUpScreen {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 50px;  
+  background-color: rgba(0,0,0,.85);
+}
+
+.signUpScreen__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpScreen__form h1 {
+  text-align: left;
+  margin-bottom: 25px;
+  
+}
+
+
+.signUpScreen__form input {
+  width: 100%;  
+  max-width: 600px;
+  height: 40px;      
+  outline-width: 0;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px;
+}
+
+.signUpScreen__form button {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #e50914;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+  .signUpScreen__form h4 {  
+    text-align: left;
+    margin-top: 30px;
+  }
+  
+  .signUpScreen__gray {
+    color: rgb(187, 186, 186);
+  }
+
+  .signUpScreen__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+
+  .signUpScreen__validations {        
+    color: #ff3333;
+  }
+
+  .signUpScreen__validations--email{
+    margin-bottom: 14px;
+  }
