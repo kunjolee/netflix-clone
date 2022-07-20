@@ -13,7 +13,9 @@ export const formValidation = (form: SignInForm) => {
     errors.email = 'Email required';
   } else if (!form.pass) {    
     errors.pass = 'Pass required';
-  } else {
+  } else if (form.pass.length < 6){
+    errors.pass = 'Password should be at least 6 characters';    
+  }else {
     errors.email = '';
     errors.pass = '';
   }

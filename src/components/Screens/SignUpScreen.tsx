@@ -1,8 +1,8 @@
 import { MouseEvent, useState } from 'react';
-import { auth, createUserWithEmailAndPassword } from '../../firebase/';
+import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '../../firebase/';
 
 import { useForm } from '../../hooks';
-import { formValidation } from '../../utils';
+import { formValidation, truncText } from '../../utils';
 import { SignInForm } from '../../interfaces/';
 
 import "./SignUpScreen.css"
@@ -11,6 +11,8 @@ export const INITIAL_FORM = {
   email: "",
   pass: ""
 }
+
+
 
 const SignUpScreen = () => {
   const { form, handleChange } = useForm<SignInForm>(INITIAL_FORM);
@@ -26,19 +28,33 @@ const SignUpScreen = () => {
   const register = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();      
 
-    if (handleErrors()) return;
-
-    console.log('pasas???')
+    if (handleErrors()) return;    
     
-    // createUserWithEmailAndPassword(auth, form.email, form.pass);    
+    createUserWithEmailAndPassword(auth, form.email, form.pass)
+      .then((authUser) => {
+        console.log('registerUser', authUser);
+      })
+      .catch(err => {
+        setErrors({
+          pass: truncText(err.message, 17, err.message.length - 2), email: ''
+        })
+      })
+
   }  
   
   const signIn = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (handleErrors()) return;
 
-    console.log('aca tambien pasas?')
-
+    signInWithEmailAndPassword(auth, form.email, form.pass)
+      .then((authUser) => {
+        console.log('loginUser', authUser);
+      })
+      .catch(err => {
+        setErrors({
+          pass: truncText(err.message, 17, err.message.length - 2), email: ''
+        })
+      })
   }
       
   

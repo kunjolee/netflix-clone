@@ -6,3 +6,8 @@ export const truncateDesc = (str = "", num: number) => {
       : str
   )
 }
+
+
+export const truncText = (text: string, start: number, end: number): string => {
+  return text.substring(start, end);
+}
