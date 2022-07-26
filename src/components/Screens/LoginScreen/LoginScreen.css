@@ -96,6 +96,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .loginScreen__body {
+    top: 20%;
+  }
+
   .loginScreen__body > h1 {
     font-size: 2.125rem;
     margin-bottom: 20px;

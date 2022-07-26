@@ -123,9 +123,8 @@
       gap: 2rem;
     }
     
-    .profileScreen__info img{
-    
-      height: 200px;
+    .profileScreen__info img{    
+      display: none;
     }
 
     .profileScreen__details {
@@ -141,10 +140,7 @@
     .profileScreen__body {
       padding-bottom: 3rem;
     }
-
-    .profileScreen__info img {
-      height: 120px;
-    }
+    
   }
 
   @media screen and (max-width: 769px) {  
@@ -156,9 +152,6 @@
       padding-bottom: 0;
     }
 
-    .profileScreen__info img {
-      height: 120px;
-    }
   }
 
   @media screen and (max-width: 480px) {        
@@ -166,16 +159,17 @@
       font-size: 30px;
     }
 
-    .profileScreen__info {      
-      gap: 1rem;
+    .profileScreen__body {
+      padding-top: 20%;
     }
 
-    .profileScreen__info img {
-      height: 100px;
+    .profileScreen__info {      
+      gap: 1rem;
     }    
 
     .profileScreen__details {
       margin: 0;
     }
+
   }
   
