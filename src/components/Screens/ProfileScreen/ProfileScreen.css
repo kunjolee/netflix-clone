@@ -133,44 +133,49 @@
     }
   }
 
+  @media screen and (max-width: 1024px) and (max-height: 750px) {
+    .profileScreen {
+      height: auto;
+    }
+
+    .profileScreen__body {
+      padding-bottom: 3rem;
+    }
+
+    .profileScreen__info img {
+      height: 120px;
+    }
+  }
+
   @media screen and (max-width: 769px) {  
     .profileScreen {
       height: 100vh;
     }          
+
+    .profileScreen__body {
+      padding-bottom: 0;
+    }
+
     .profileScreen__info img {
-      height: 150px;
+      height: 120px;
     }
   }
 
-  @media screen and (max-width: 480px) {     
- /*    
-
-    /* .profileScreen__details {     
-      margin: 0;
+  @media screen and (max-width: 480px) {        
+    .profileScreen__body h1 {
+      font-size: 30px;
     }
-    
-    .profileScreen__plans-container {
-      flex-direction: column;
-      justify-content: flex-start;
-      margin: 0;
-      margin: 20px 0;
-      height: auto;
+
+    .profileScreen__info {      
+      gap: 1rem;
+    }
+
+    .profileScreen__info img {
+      height: 100px;
     }    
-    
-    .profileScreen__types {
-      flex-direction: row;
-    }
-    
-    .profileScreen__buttons {
-      margin-top: 20px;
-      gap: .5rem;      
-      flex-direction: row;
-    }
 
-    .profileScreen__button {
-      font-size: .9rem;
-      padding: 5px;
-    } */
-    
+    .profileScreen__details {
+      margin: 0;
+    }
   }
   

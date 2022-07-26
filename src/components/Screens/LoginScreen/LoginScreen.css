@@ -67,7 +67,7 @@
 }
 
 .loginScreen__body > h3 {
-  font-size: 1.rem;
+  font-size: 1rem;
   font-weight: 400;  
 }
 
@@ -93,4 +93,36 @@
   font-weight: 600;
   cursor: pointer;
 
+}
+
+@media screen and (max-width: 480px) {
+  .loginScreen__body > h1 {
+    font-size: 2.125rem;
+    margin-bottom: 20px;
+  }
+
+  .loginScreen__body > h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .loginScreen__body > h3 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .loginScreen__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .loginScreen__form input {
+    width: 100%;
+    padding: 10px;
+  }
+  .loginScreen__form button {
+    padding: 10px;
+    font-size: .8rem;
+  }
 }

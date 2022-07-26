@@ -33,7 +33,7 @@ const LoginScreen = () => {
             <h2>Watch anywere. Cancel at any time</h2>
             <h3>Ready to watch? Enter your email to create or restart your membership</h3>
             <div className='loginScreen__input'>
-              <form>
+              <form className='loginScreen__form'>
                 <input type='email' 
                   placeholder='Email Address'                
                 />

@@ -125,3 +125,16 @@ iframe {
   text-align: center  ;
 }
 
+@media screen and (max-width: 769px) {
+  .row__errorTrailer {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    margin: 0;
+    margin-left: 10px;
+  }
+}
