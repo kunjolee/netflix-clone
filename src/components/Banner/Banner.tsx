@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
-import { movieApi, requests } from "../../api/";
+import { movieApi, requests } from '../../api/';
 
 import { NetflixOriginals, OriginalsResult } from '../../interfaces/';
 
 import { truncateDesc } from '../../utils';
 
-import "./Banner.css";
+import './Banner.css';
 
 const Banner = () => {
 
@@ -32,29 +32,28 @@ const Banner = () => {
   }, []);
 
   return movie && (    
-    <header className="banner" style={{ 
+    <header className='banner' style={{ 
       backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,      
-      backgroundSize: "cover ",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat"
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
     }}>
-      <div className="banner__contents">
-        <h1 className="banner__title">
+      <div className='banner__contents'>
+        <h1 className='banner__title'>
           { movie?.name || movie?.original_name }
         </h1>
-        <p className="banner__description">
+        <p className='banner__description'>
           {
             truncateDesc( movie?.overview , 150)
           }
         </p>
-        <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
+        <div className='banner__buttons'>
+          <button className='banner__button'>Play</button>
+          <button className='banner__button'>My List</button>
         </div>
       </div>
 
-      <div className="banner--fadeBottom" />
-
+      <div className='banner--fadeBottom' />    
     </header>
   )
 }

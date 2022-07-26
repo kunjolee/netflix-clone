@@ -1,5 +1,5 @@
-import { Banner, Navbar, Row } from '../'
-import { requests } from "../../api/"
+import { Banner, Navbar, Row, Footer } from '../'
+import { requests } from '../../api/'
 
 const HomeScreen = () => {
   return (
@@ -17,29 +17,30 @@ const HomeScreen = () => {
         isLargeRow        
       />
       <Row 
-        title="Top Rated"
+        title='Top Rated'
         fetchUrl={requests.fetchTopRated}        
       />            
       <Row 
-        title="Action Movies"
+        title='Action Movies'
         fetchUrl={requests.fetchActionMovies}        
       />      
       <Row 
-        title="Comedy Movies"
+        title='Comedy Movies'
         fetchUrl={requests.fetchComedyMovies}        
       />      
       <Row 
-        title="Horror Movies"
+        title='Horror Movies'
         fetchUrl={requests.fetchHorrorMovies}        
       />      
       <Row 
-        title="Romance Movies"
+        title='Romance Movies'
         fetchUrl={requests.fetchRomanceMovies}        
       />      
       <Row 
-        title="Documentaries"
+        title='Documentaries'
         fetchUrl={requests.fetchDocumentaries}        
-      />      
+      />     
+      <Footer />
     </>
   )
 }

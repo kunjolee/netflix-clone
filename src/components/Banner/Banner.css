@@ -9,28 +9,52 @@
   justify-content: center;
 }
 
+.banner::after{  
+  content: '';
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;   
+  background-color: rgba(25, 25, 25, .4);
+  background-image: linear-gradient(to top,
+          rgba(0, 0, 0, .4) 0,
+          rgba(0, 0, 0, 0) 60%,
+          rgba(0, 0, 0, .4) 100%);
+}
 
 .banner__contents {
   margin-left: 30px;
+  z-index: 90;
 }
 
 .banner__title {
-  font-size: 5rem;
+  
+  font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
-  /* color: #fbe30c; */
-  color: #e6e6e6;
+  color: #fbe30c;
+  /* color: #e6e6e6; */
   margin: 0;
-  width: 45%;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .banner__title {
+    width: 45%;
+    font-size: 5rem;
+  }
 }
 
 
+
 .banner__description {
-  width: 45rem;
+  width: 80%;
+  text-align: justify;
   line-height: 1.3;
   font-size: 1.3rem;
   max-width: 460px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .banner__buttons {

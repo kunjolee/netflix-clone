@@ -1,15 +1,15 @@
 import { MouseEvent, useState } from 'react';
-import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '../../firebase/';
+import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '../../../firebase/';
 
-import { useForm } from '../../hooks';
-import { formValidation, truncText } from '../../utils';
-import { SignInForm } from '../../interfaces/';
+import { useForm } from '../../../hooks';
+import { formValidation, truncText } from '../../../utils';
+import { SignInForm } from '../../../interfaces/';
 
-import "./SignUpScreen.css"
+import './SignUpScreen.css'
 
 export const INITIAL_FORM = {
-  email: "",
-  pass: ""
+  email: '',
+  pass: ''
 }
 
 
@@ -59,12 +59,12 @@ const SignUpScreen = () => {
       
   
   return (
-    <div className="signUpScreen">
-      <form className="signUpScreen__form">
+    <div className='signUpScreen'>
+      <form className='signUpScreen__form'>
         <h1>Sign In</h1>
         <input  
-          type="email"    
-          placeholder="Email" 
+          type='email'    
+          placeholder='Email' 
           value={form.email}           
           name='email'
           onChange={handleChange}          
@@ -72,9 +72,9 @@ const SignUpScreen = () => {
         />
         {errors?.email && <p className='signUpScreen__validations signUpScreen__validations--email'>{errors.email}</p>}
         <input  
-          type="password" 
-          placeholder="password" 
-          autoComplete="on" 
+          type='password' 
+          placeholder='password' 
+          autoComplete='on' 
           value={form.pass}
           name='pass'
           onChange={handleChange}
@@ -82,14 +82,14 @@ const SignUpScreen = () => {
           />
         {errors?.pass && <p className='signUpScreen__validations'>{errors.pass}</p>}
         <button         
-          type="submit"   
+          type='submit'   
           onClick={signIn}
         >
           Sign In
         </button>        
         <h4>
-          <span className="signUpScreen__gray">New to Netflix? </span>
-          <span className="signUpScreen__link" onClick={register}>Sign Up now</span>          
+          <span className='signUpScreen__gray'>New to Netflix? </span>
+          <span className='signUpScreen__link' onClick={register}>Sign Up now</span>          
         </h4>
       </form>
     </div>

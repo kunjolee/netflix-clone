@@ -1,0 +1,176 @@
+  .profileScreen {
+    height: 100vh;
+    color: white;
+  }
+
+  .profileScreen__body {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 5%;
+    /* max-width: 800px;   */
+  }
+
+  .profileScreen__info {
+    display: flex;
+  }
+
+  .profileScreen__body h1{
+    font-size: 55px;
+    font-weight: 400;
+    border-bottom: 1px solid #282c2d;
+    margin-bottom: 20px;
+  }
+  .profileScreen__info img {
+    height: 100px;
+  }
+
+  .profileScreen__details {
+    color: #fff;
+    margin-left: 25px;
+    flex: 1;
+  }
+
+  .profileScreen__details h2 { 
+    background-color: gray;
+    padding: 15px;
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  .profileScreen__plans {
+    margin-top: 20px;
+  }
+
+  .profileScreen__plans h3 {
+    border-bottom: 1px solid #282c2d;
+    padding-bottom: 10px;
+  }
+
+  .profileScreen__renewal {
+    margin-top: 20px;
+  }
+
+  .profileScreen__plans-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 20px;
+    height: 170px;
+  }
+  
+  .profileScreen__types {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .profileScreen__type{
+    font-size: .9rem;
+    font-weight: 400;
+    color: #b5b5b5;
+  }
+
+  .profileScreen__signOut {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 5%;
+    width: 100%;
+    color: #fff;
+    background-color: #E50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profileScreen__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  
+  .profileScreen__button {
+    padding: 10px;
+    font-size: 1rem;    
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .profileScreen__button--grayButton{
+    background-color: gray;
+  }
+
+  /* mobile part */
+
+  @media screen and (max-width: 1024px) {    
+
+    .profileScreen__body {
+      padding: 3rem 0;
+      width: 80%;
+    }
+
+    .profileScreen__body h1 {
+      font-size: 40px;
+    }
+
+    .profileScreen__info {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .profileScreen__info img{
+    
+      height: 200px;
+    }
+
+    .profileScreen__details {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 769px) {  
+    .profileScreen {
+      height: 100vh;
+    }          
+    .profileScreen__info img {
+      height: 150px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {     
+ /*    
+
+    /* .profileScreen__details {     
+      margin: 0;
+    }
+    
+    .profileScreen__plans-container {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0;
+      margin: 20px 0;
+      height: auto;
+    }    
+    
+    .profileScreen__types {
+      flex-direction: row;
+    }
+    
+    .profileScreen__buttons {
+      margin-top: 20px;
+      gap: .5rem;      
+      flex-direction: row;
+    }
+
+    .profileScreen__button {
+      font-size: .9rem;
+      padding: 5px;
+    } */
+    
+  }
+  

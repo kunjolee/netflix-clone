@@ -17,8 +17,8 @@ export interface OriginalsResult extends Omit<MovieResult,
 
 
 export enum OriginalsLanguage {
-  En = "en",
-  Es = "es",
-  Ja = "ja",
-  Ko = "ko",
+  En = 'en',
+  Es = 'es',
+  Ja = 'ja',
+  Ko = 'ko',
 }

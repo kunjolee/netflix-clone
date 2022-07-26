@@ -11,7 +11,7 @@ export interface MovieResult {
   adult:             boolean;
   backdrop_path:     string;
   genre_ids:         number[];
-  id:                number;
+  id:                string;
   media_type:        MediaType;
   title?:            string;
   original_language: OriginalLanguage;
@@ -30,12 +30,12 @@ export interface MovieResult {
 }
 
 export enum MediaType {
-  Movie = "movie",
-  Tv = "tv",
+  Movie = 'movie',
+  Tv = 'tv',
 }
 
 export enum OriginalLanguage {
-  En = "en",
-  Ko = "ko",
-  Zh = "zh",
+  En = 'en',
+  Ko = 'ko',
+  Zh = 'zh',
 }
